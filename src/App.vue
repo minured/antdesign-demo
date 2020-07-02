@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    hello
+    <h2>按需引入, 通过 babel-plugin-import 自动转换import的路径</h2>
+    <Button>ant design</Button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  //通过babel-plugin-import 转换为 import {Button} from "ant-design-vue/lib/button"
+  import {Button} from 'ant-design-vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      Button
+    }
+
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
